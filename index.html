@@ -6,12 +6,9 @@
 
 <title>AKA REKLAMCILIK | Reklam ve Tasarım</title>
 
-<meta name="description" content="AKA REKLAMCILIK - Sosyal medya, reklam, logo, afiş, video ve web tasarım hizmetleri. Markanızı dijital dünyada öne çıkarın.">
-
-<meta name="keywords" content="AKA Reklamcılık, reklam, tasarım, logo tasarımı, sosyal medya, Ankara reklam, web tasarım">
+<meta name="description" content="AKA REKLAMCILIK - Reklam, sosyal medya, logo, afiş, video ve web tasarım hizmetleri.">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -33,45 +30,30 @@ body.no-scroll{
     overflow:hidden;
 }
 
-::-webkit-scrollbar{
-    width:7px;
-}
-
-::-webkit-scrollbar-track{
-    background:#050505;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#555;
-    border-radius:20px;
-}
-
-/* HEADER */
-
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:78px;
+    height:75px;
     z-index:9999;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 7%;
+    padding:0 6%;
 
-    background:rgba(0,0,0,.82);
-    backdrop-filter:blur(18px);
+    background:rgba(0,0,0,.88);
+    backdrop-filter:blur(15px);
 
-    border-bottom:1px solid #1c1c1c;
+    border-bottom:1px solid #222;
 }
 
 .logo{
-    color:#fff;
+    color:white;
     text-decoration:none;
-    font-size:22px;
+    font-size:20px;
     font-weight:900;
     letter-spacing:2px;
 }
@@ -80,12 +62,10 @@ header{
     color:#666;
 }
 
-/* DESKTOP MENU */
-
 .desktop-menu{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:22px;
 }
 
 .desktop-menu a{
@@ -100,55 +80,33 @@ header{
 }
 
 .header-button{
-    padding:12px 20px;
     background:#fff;
-    color:#000 !important;
+    color:#000!important;
+    padding:11px 18px;
     border-radius:3px;
-    font-weight:bold !important;
+    font-weight:bold;
 }
-
-.header-button:hover{
-    background:#aaa;
-}
-
-/* MOBILE MENU BUTTON */
 
 .menu-button{
     display:none;
-
     background:none;
-    border:1px solid #333;
-
+    border:1px solid #444;
     color:#fff;
-
-    width:45px;
-    height:42px;
-
-    font-size:24px;
-
-    cursor:pointer;
+    width:44px;
+    height:40px;
+    font-size:22px;
 }
-
-/* MOBILE MENU */
 
 .mobile-menu{
     position:fixed;
-
-    top:78px;
+    top:75px;
     right:-100%;
-
     width:100%;
-    height:calc(100vh - 78px);
-
+    height:calc(100vh - 75px);
     background:#050505;
-
     z-index:9998;
-
-    padding:40px 25px;
-
+    padding:30px 25px;
     transition:.4s;
-
-    border-top:1px solid #222;
 }
 
 .mobile-menu.active{
@@ -157,102 +115,51 @@ header{
 
 .mobile-menu a{
     display:block;
-
     color:#fff;
     text-decoration:none;
-
-    font-size:28px;
+    font-size:24px;
     font-weight:bold;
-
-    padding:20px 0;
-
+    padding:18px 0;
     border-bottom:1px solid #222;
 }
 
 .mobile-menu .mobile-randevu{
-    margin-top:30px;
-
+    margin-top:25px;
     text-align:center;
-
     background:#fff;
     color:#000;
-
-    padding:18px;
-
-    border:none;
+    padding:17px;
 }
-
-/* HERO */
 
 .hero{
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
     padding:130px 20px 80px;
-
-    position:relative;
-    overflow:hidden;
-}
-
-.hero::before{
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-    height:500px;
-
-    background:#fff;
-
-    opacity:.035;
-
-    border-radius:50%;
-
-    filter:blur(120px);
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-
-    max-width:1000px;
+    max-width:950px;
 }
 
 .badge{
     display:inline-block;
-
     border:1px solid #333;
-
     padding:10px 18px;
-
     border-radius:30px;
-
     color:#888;
-
-    font-size:12px;
-
+    font-size:11px;
     letter-spacing:4px;
-
-    margin-bottom:28px;
-
-    animation:fadeDown 1s ease;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(55px,10vw,130px);
-
-    line-height:.84;
-
-    letter-spacing:-7px;
-
+    font-size:clamp(55px,10vw,125px);
+    line-height:.85;
+    letter-spacing:-6px;
     font-weight:900;
-
-    animation:fadeUp 1s ease;
 }
 
 .hero h1 span{
@@ -261,40 +168,27 @@ header{
 
 .hero-description{
     max-width:650px;
-
     margin:35px auto;
-
     color:#888;
-
-    font-size:18px;
-
     line-height:1.7;
-
-    animation:fadeUp 1.3s ease;
+    font-size:17px;
 }
 
 .buttons{
     display:flex;
-
     justify-content:center;
-
     gap:15px;
-
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-
-    padding:17px 30px;
-
+    padding:16px 28px;
     text-decoration:none;
-
     font-weight:bold;
-
     border-radius:3px;
-
     transition:.3s;
+    cursor:pointer;
 }
 
 .btn-white{
@@ -303,14 +197,11 @@ header{
 }
 
 .btn-white:hover{
-    transform:translateY(-5px);
-
-    box-shadow:0 15px 40px rgba(255,255,255,.15);
+    transform:translateY(-4px);
 }
 
 .btn-dark{
     color:#fff;
-
     border:1px solid #333;
 }
 
@@ -319,357 +210,356 @@ header{
     color:#000;
 }
 
-/* GENERAL SECTION */
-
 section{
-    padding:110px 7%;
+    padding:100px 7%;
+    border-top:1px solid #191919;
 }
 
 .section-heading{
     max-width:750px;
-
-    margin-bottom:60px;
+    margin-bottom:50px;
 }
 
 .section-heading small{
     color:#666;
-
     letter-spacing:4px;
-
-    font-size:12px;
+    font-size:11px;
 }
 
 .section-heading h2{
-    font-size:clamp(42px,6vw,72px);
-
+    font-size:clamp(40px,6vw,70px);
     letter-spacing:-4px;
-
     margin-top:15px;
 }
 
 .section-heading p{
     color:#777;
-
     line-height:1.8;
-
     margin-top:20px;
 }
 
-/* SERVICES */
-
-.services{
-    border-top:1px solid #1b1b1b;
-}
+/* HİZMETLER */
 
 .services-grid{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:18px;
 }
 
 .service{
-    min-height:260px;
-
-    padding:35px 30px;
-
+    min-height:240px;
+    padding:30px;
     border:1px solid #222;
-
     background:#090909;
-
-    position:relative;
-
-    overflow:hidden;
-
-    transition:.4s;
-}
-
-.service::after{
-    content:"";
-
-    position:absolute;
-
-    bottom:0;
-    left:0;
-
-    width:0;
-    height:2px;
-
-    background:#fff;
-
-    transition:.4s;
+    transition:.3s;
 }
 
 .service:hover{
-    transform:translateY(-8px);
-
-    border-color:#444;
-}
-
-.service:hover::after{
-    width:100%;
+    transform:translateY(-7px);
+    border-color:#555;
 }
 
 .service-number{
     color:#555;
-
-    font-size:12px;
-
+    font-size:11px;
     letter-spacing:2px;
-
-    margin-bottom:45px;
+    margin-bottom:40px;
 }
 
 .service h3{
-    font-size:24px;
-
-    margin-bottom:15px;
+    font-size:23px;
+    margin-bottom:14px;
 }
 
 .service p{
     color:#777;
-
     line-height:1.7;
 }
 
-/* ABOUT */
+/* HAKKIMIZDA */
 
 .about{
-    border-top:1px solid #1b1b1b;
-
     display:grid;
-
     grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
+    gap:60px;
     align-items:center;
 }
 
 .about h2{
-    font-size:clamp(42px,6vw,70px);
-
-    letter-spacing:-4px;
-
+    font-size:clamp(40px,6vw,70px);
     line-height:.95;
-
+    letter-spacing:-4px;
     margin:20px 0 30px;
 }
 
 .about p{
     color:#888;
-
     line-height:1.8;
-
-    margin-bottom:18px;
+    margin-bottom:15px;
 }
 
 .about-card{
     border:1px solid #222;
-
     background:#090909;
-
-    padding:55px 40px;
+    padding:50px 35px;
 }
 
 .about-card h3{
     font-size:60px;
-
-    letter-spacing:-4px;
-
     margin-bottom:20px;
 }
 
-.about-card p{
-    color:#777;
-}
-
-/* PORTFOLIO */
-
-.portfolio{
-    border-top:1px solid #1b1b1b;
-}
+/* PORTFOLYO */
 
 .portfolio-grid{
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:18px;
 }
 
 .project{
-    min-height:310px;
-
+    min-height:280px;
     padding:30px;
-
     border:1px solid #222;
-
-    background:
-    radial-gradient(circle at 80% 20%,#252525 0,#0b0b0b 35%,#050505 70%);
-
+    background:#090909;
     display:flex;
-
     align-items:flex-end;
-
-    position:relative;
-
-    overflow:hidden;
-
-    transition:.4s;
+    transition:.3s;
 }
 
 .project:hover{
     transform:translateY(-6px);
-
     border-color:#555;
 }
 
 .project-number{
     position:absolute;
-
-    top:25px;
-    right:25px;
-
+    margin-top:-220px;
+    margin-left:0;
     color:#555;
-
-    font-size:13px;
 }
 
 .project h3{
-    font-size:28px;
+    font-size:27px;
 }
 
 .project p{
     color:#777;
-
     margin-top:8px;
 }
 
-/* REVIEWS */
+/* HESAP */
 
-.reviews{
-    border-top:1px solid #1b1b1b;
+.account-section{
+    background:#070707;
 }
 
-.reviews-grid{
+.account-box{
+    max-width:500px;
+    margin:auto;
+    border:1px solid #292929;
+    background:#0b0b0b;
+    padding:30px;
+}
+
+.account-tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.account-tabs button{
+    flex:1;
+    padding:13px;
+    border:1px solid #333;
+    background:#111;
+    color:#aaa;
+    cursor:pointer;
+}
+
+.account-tabs button.active{
+    background:#fff;
+    color:#000;
+}
+
+.auth-form{
+    display:none;
+}
+
+.auth-form.active{
+    display:block;
+}
+
+.auth-form input{
+    width:100%;
+    padding:15px;
+    margin-bottom:12px;
+
+    background:#050505;
+    border:1px solid #333;
+    color:#fff;
+
+    outline:none;
+}
+
+.auth-form input:focus{
+    border-color:#fff;
+}
+
+.auth-form button{
+    width:100%;
+    padding:15px;
+    border:0;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.auth-message{
+    margin-top:15px;
+    color:#888;
+    font-size:14px;
+    line-height:1.5;
+}
+
+#userPanel{
+    display:none;
+}
+
+.user-email{
+    color:#888;
+    margin-bottom:20px;
+}
+
+.logout-btn{
+    width:100%;
+    padding:13px;
+    background:#111;
+    border:1px solid #333;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* YORUMLAR */
+
+.review-form{
+    max-width:650px;
+    border:1px solid #222;
+    background:#090909;
+    padding:30px;
+    margin-bottom:45px;
+}
+
+.review-form textarea{
+    width:100%;
+    min-height:130px;
+    resize:vertical;
+
+    padding:15px;
+
+    background:#050505;
+    color:#fff;
+
+    border:1px solid #333;
+
+    margin-bottom:15px;
+}
+
+.stars-input{
+    display:flex;
+    gap:7px;
+    margin-bottom:20px;
+}
+
+.star-btn{
+    border:0;
+    background:none;
+    color:#444;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.star-btn.selected{
+    color:#fff;
+}
+
+.review-list{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:18px;
 }
 
 .review{
     border:1px solid #222;
-
     background:#090909;
-
-    padding:35px;
+    padding:30px;
 }
 
-.stars{
-    letter-spacing:5px;
-
-    margin-bottom:25px;
+.review-stars{
+    font-size:18px;
+    letter-spacing:3px;
+    margin-bottom:20px;
 }
 
-.review p{
+.review-text{
     color:#888;
-
     line-height:1.7;
-
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 
-.review strong{
-    font-size:14px;
+.review-user{
+    font-size:13px;
+    color:#fff;
+}
+
+.average-rating{
+    margin-bottom:30px;
+    color:#888;
+}
+
+.average-rating strong{
+    color:#fff;
+    font-size:25px;
 }
 
 /* CTA */
 
 .cta{
-    border-top:1px solid #1b1b1b;
-
     text-align:center;
-
-    padding:150px 20px;
+    padding:140px 20px;
 }
 
 .cta h2{
-    font-size:clamp(45px,8vw,100px);
-
-    letter-spacing:-6px;
-
+    font-size:clamp(45px,8vw,95px);
     line-height:.9;
+    letter-spacing:-5px;
 }
 
 .cta p{
-    color:#777;
-
     max-width:600px;
-
-    margin:30px auto 35px;
-
+    margin:30px auto;
+    color:#777;
     line-height:1.7;
 }
 
 /* FOOTER */
 
 footer{
-    border-top:1px solid #1b1b1b;
-
-    padding:40px 7%;
-
+    border-top:1px solid #222;
+    padding:35px 7%;
     display:flex;
-
-    align-items:center;
-
     justify-content:space-between;
-
     color:#555;
-
     font-size:13px;
 }
 
 footer a{
     color:#fff;
-
     text-decoration:none;
 }
 
-/* ANIMATIONS */
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-@keyframes fadeDown{
-
-    from{
-        opacity:0;
-        transform:translateY(-20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-/* MOBILE */
+/* MOBİL */
 
 @media(max-width:900px){
 
@@ -685,60 +575,34 @@ footer a{
         display:block;
     }
 
-    .hero h1{
-        letter-spacing:-4px;
-    }
-
     section{
         padding:80px 20px;
     }
 
-    .services-grid{
+    .services-grid,
+    .review-list{
         grid-template-columns:1fr;
     }
 
     .about{
         grid-template-columns:1fr;
-        gap:40px;
     }
 
     .portfolio-grid{
         grid-template-columns:1fr;
     }
 
-    .reviews-grid{
-        grid-template-columns:1fr;
-    }
-
-    .project{
-        min-height:250px;
-    }
-
     footer{
-        padding:30px 20px;
-
         flex-direction:column;
-
         gap:15px;
-
         text-align:center;
     }
-
 }
 
 @media(max-width:500px){
 
-    .hero{
-        padding-left:15px;
-        padding-right:15px;
-    }
-
     .hero h1{
-        font-size:56px;
-    }
-
-    .hero-description{
-        font-size:16px;
+        font-size:55px;
     }
 
     .buttons{
@@ -748,20 +612,11 @@ footer a{
     .btn{
         width:100%;
     }
-
-    .about-card{
-        padding:40px 25px;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
-
-
-<!-- HEADER -->
 
 <header>
 
@@ -769,19 +624,14 @@ footer a{
 AKA <span>REKLAMCILIK</span>
 </a>
 
-
 <nav class="desktop-menu">
 
 <a href="#anasayfa">Ana Sayfa</a>
-
 <a href="#hizmetler">Hizmetler</a>
-
 <a href="#portfolyo">Çalışmalar</a>
-
 <a href="#hakkimizda">Hakkımızda</a>
-
+<a href="#hesap">Hesabım</a>
 <a href="#yorumlar">Yorumlar</a>
-
 <a href="#iletisim">İletişim</a>
 
 <a
@@ -793,31 +643,18 @@ Randevu Al
 
 </nav>
 
-
-<button
-class="menu-button"
-id="menuButton"
-onclick="openMenu()">
-☰
-</button>
+<button class="menu-button" onclick="openMenu()">☰</button>
 
 </header>
-
-
-<!-- MOBILE MENU -->
 
 <div class="mobile-menu" id="mobileMenu">
 
 <a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
-
 <a href="#hizmetler" onclick="closeMenu()">Hizmetler</a>
-
 <a href="#portfolyo" onclick="closeMenu()">Çalışmalar</a>
-
 <a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a>
-
-<a href="#yorumlar" onclick="closeMenu()">Müşteri Yorumları</a>
-
+<a href="#hesap" onclick="closeMenu()">Hesabım</a>
+<a href="#yorumlar" onclick="closeMenu()">Yorumlar</a>
 <a href="#iletisim" onclick="closeMenu()">İletişim</a>
 
 <a
@@ -830,15 +667,13 @@ RANDEVU AL →
 </div>
 
 
-<!-- HERO -->
+<!-- ANA SAYFA -->
 
 <section class="hero" id="anasayfa">
 
 <div class="hero-content">
 
-<div class="badge">
-AKA REKLAMCILIK
-</div>
+<div class="badge">AKA REKLAMCILIK</div>
 
 <h1>
 MARKANI<br>
@@ -846,9 +681,8 @@ MARKANI<br>
 </h1>
 
 <p class="hero-description">
-Markanızın dijital dünyada daha güçlü, daha profesyonel
-ve daha dikkat çekici görünmesi için yaratıcı reklam
-ve tasarım çözümleri üretiyoruz.
+Markanız için modern reklam, tasarım ve dijital
+çözümler üretiyoruz.
 </p>
 
 <div class="buttons">
@@ -873,9 +707,9 @@ HİZMETLERİ KEŞFET
 </section>
 
 
-<!-- SERVICES -->
+<!-- HİZMETLER -->
 
-<section class="services" id="hizmetler">
+<section id="hizmetler">
 
 <div class="section-heading">
 
@@ -884,106 +718,55 @@ HİZMETLERİ KEŞFET
 <h2>Hizmetlerimiz</h2>
 
 <p>
-Markanızın ihtiyacına göre modern ve yaratıcı
-dijital reklam çözümleri hazırlıyoruz.
+Markanızın ihtiyacına uygun yaratıcı reklam
+ve tasarım çözümleri.
 </p>
 
 </div>
-
 
 <div class="services-grid">
 
-
 <div class="service">
-
 <div class="service-number">01 / SOCIAL MEDIA</div>
-
 <h3>Sosyal Medya</h3>
-
-<p>
-Instagram ve sosyal medya hesaplarınız için
-modern içerik, reklam ve tasarım çalışmaları.
-</p>
-
+<p>Instagram ve sosyal medya içerik ve reklam çalışmaları.</p>
 </div>
 
-
 <div class="service">
-
 <div class="service-number">02 / BRANDING</div>
-
 <h3>Logo Tasarımı</h3>
-
-<p>
-Markanızın kimliğini yansıtan özgün ve
-profesyonel logo tasarımları.
-</p>
-
+<p>Markanız için özgün logo ve kurumsal kimlik.</p>
 </div>
 
-
 <div class="service">
-
 <div class="service-number">03 / ADVERTISING</div>
-
 <h3>Reklam Yönetimi</h3>
-
-<p>
-Markanızın daha fazla kişiye ulaşması için
-yaratıcı reklam çözümleri.
-</p>
-
+<p>Dijital dünyada markanızı daha fazla kişiye ulaştırma.</p>
 </div>
 
-
 <div class="service">
-
 <div class="service-number">04 / DESIGN</div>
-
 <h3>Afiş & Poster</h3>
-
-<p>
-Kampanya, etkinlik ve işletmeler için
-dikkat çekici afiş tasarımları.
-</p>
-
+<p>Kampanya ve işletmeler için dikkat çekici tasarımlar.</p>
 </div>
 
-
 <div class="service">
-
 <div class="service-number">05 / VIDEO</div>
-
 <h3>Video Reklam</h3>
-
-<p>
-Sosyal medya için etkileyici ve dikkat çekici
-video reklam içerikleri.
-</p>
-
+<p>Sosyal medya için yaratıcı video içerikleri.</p>
 </div>
-
 
 <div class="service">
-
 <div class="service-number">06 / WEB</div>
-
 <h3>Web Tasarım</h3>
-
-<p>
-İşletmeler için modern, hızlı ve mobil uyumlu
-web sitesi tasarımları.
-</p>
-
+<p>Modern ve mobil uyumlu web siteleri.</p>
 </div>
 
-
 </div>
-
 </section>
 
 
-<!-- ABOUT -->
+<!-- HAKKIMIZDA -->
 
 <section class="about" id="hakkimizda">
 
@@ -999,16 +782,14 @@ DÖNÜŞTÜRÜYORUZ.
 
 <p>
 AKA REKLAMCILIK olarak markaların dijital dünyada
-daha güçlü bir kimlik oluşturmasına yardımcı oluyoruz.
+daha güçlü görünmesine yardımcı oluyoruz.
 </p>
 
 <p>
-Tasarım, reklam ve dijital çözümleri bir araya
-getirerek markanız için yaratıcı işler üretiyoruz.
+Tasarım, reklam ve dijital çözümleri bir araya getiriyoruz.
 </p>
 
 </div>
-
 
 <div class="about-card">
 
@@ -1018,9 +799,7 @@ getirerek markanız için yaratıcı işler üretiyoruz.
 Yaratıcılık.<br>
 Tasarım.<br>
 Reklam.<br><br>
-
-Markanız için düşündüğünüzden daha fazlasını
-üretmek için buradayız.
+Markanız için daha fazlasını üretmek için buradayız.
 </p>
 
 </div>
@@ -1028,9 +807,9 @@ Markanız için düşündüğünüzden daha fazlasını
 </section>
 
 
-<!-- PORTFOLIO -->
+<!-- ÇALIŞMALAR -->
 
-<section class="portfolio" id="portfolyo">
+<section id="portfolyo">
 
 <div class="section-heading">
 
@@ -1039,156 +818,235 @@ Markanız için düşündüğünüzden daha fazlasını
 <h2>Çalışmalarımız</h2>
 
 <p>
-Gerçek çalışmalarını burada sergileyebilirsin.
-Yeni projeler geldikçe bu bölüme ekleyebilirsin.
+Kendi gerçek çalışmalarınızı burada sergileyebilirsiniz.
 </p>
 
 </div>
 
-
 <div class="portfolio-grid">
 
-
 <div class="project">
-
+<div>
 <div class="project-number">01</div>
-
-<div>
-
 <h3>Logo Tasarımı</h3>
-
 <p>Marka & Kurumsal Kimlik</p>
-
 </div>
-
 </div>
-
 
 <div class="project">
-
+<div>
 <div class="project-number">02</div>
-
-<div>
-
 <h3>Sosyal Medya</h3>
-
 <p>Instagram Reklam Tasarımı</p>
-
 </div>
-
 </div>
-
 
 <div class="project">
-
+<div>
 <div class="project-number">03</div>
-
-<div>
-
 <h3>Reklam Kampanyası</h3>
-
 <p>Dijital Reklam Çalışması</p>
-
 </div>
-
 </div>
-
 
 <div class="project">
-
-<div class="project-number">04</div>
-
 <div>
-
+<div class="project-number">04</div>
 <h3>Afiş Tasarımı</h3>
-
-<p>Poster & Kampanya Tasarımı</p>
-
+<p>Poster & Kampanya</p>
 </div>
-
 </div>
-
 
 </div>
 
 </section>
 
 
-<!-- REVIEWS -->
+<!-- HESAP -->
 
-<section class="reviews" id="yorumlar">
+<section class="account-section" id="hesap">
+
+<div class="section-heading">
+
+<small>MÜŞTERİ ALANI</small>
+
+<h2>Hesabım</h2>
+
+<p>
+Yorum yapmak ve puan vermek için hesabınıza giriş yapın.
+</p>
+
+</div>
+
+<div class="account-box">
+
+<div id="authArea">
+
+<div class="account-tabs">
+
+<button
+id="loginTab"
+class="active"
+onclick="showLogin()">
+Giriş Yap
+</button>
+
+<button
+id="registerTab"
+onclick="showRegister()">
+Kayıt Ol
+</button>
+
+</div>
+
+
+<form id="loginForm" class="auth-form active">
+
+<input
+type="email"
+id="loginEmail"
+placeholder="E-posta"
+required>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Şifre"
+required>
+
+<button type="submit">
+GİRİŞ YAP
+</button>
+
+</form>
+
+
+<form id="registerForm" class="auth-form">
+
+<input
+type="text"
+id="registerName"
+placeholder="Ad Soyad"
+required>
+
+<input
+type="email"
+id="registerEmail"
+placeholder="E-posta"
+required>
+
+<input
+type="password"
+id="registerPassword"
+placeholder="Şifre (en az 6 karakter)"
+minlength="6"
+required>
+
+<button type="submit">
+HESAP OLUŞTUR
+</button>
+
+</form>
+
+<div class="auth-message" id="authMessage"></div>
+
+</div>
+
+
+<div id="userPanel">
+
+<h3 style="margin-bottom:15px;">
+Hoş geldin 👋
+</h3>
+
+<div class="user-email" id="userEmail"></div>
+
+<button
+class="logout-btn"
+onclick="logout()">
+ÇIKIŞ YAP
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- YORUMLAR -->
+
+<section id="yorumlar">
 
 <div class="section-heading">
 
 <small>MÜŞTERİLERİMİZ</small>
 
-<h2>Müşteri Yorumları</h2>
+<h2>Yorumlar & Puanlar</h2>
 
 <p>
-Gerçek müşterilerinden aldığın yorumları
-buraya ekleyebilirsin.
+Müşteriler deneyimlerini paylaşabilir ve AKA REKLAMCILIK'a
+1–5 yıldız arasında puan verebilir.
 </p>
 
 </div>
 
+<div class="average-rating">
 
-<div class="reviews-grid">
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-“Buraya gerçek müşterinizden aldığınız
-yorum gelecek.”
-</p>
-
-<strong>— Müşteri Adı</strong>
+Ortalama puan:
+<strong id="averageRating">0.0</strong> / 5
+<br>
+<span id="ratingCount">0 değerlendirme</span>
 
 </div>
 
 
-<div class="review">
+<div class="review-form">
 
-<div class="stars">
-★★★★★
-</div>
+<h3 style="margin-bottom:20px;">
+Yorum Yap
+</h3>
 
-<p>
-“Buraya gerçek müşterinizden aldığınız
-yorum gelecek.”
-</p>
+<div class="stars-input">
 
-<strong>— Müşteri Adı</strong>
-
-</div>
-
-
-<div class="review">
-
-<div class="stars">
-★★★★★
-</div>
-
-<p>
-“Buraya gerçek müşterinizden aldığınız
-yorum gelecek.”
-</p>
-
-<strong>— Müşteri Adı</strong>
+<button class="star-btn" data-star="1">★</button>
+<button class="star-btn" data-star="2">★</button>
+<button class="star-btn" data-star="3">★</button>
+<button class="star-btn" data-star="4">★</button>
+<button class="star-btn" data-star="5">★</button>
 
 </div>
 
+<textarea
+id="reviewText"
+placeholder="Deneyiminizi yazın..."
+></textarea>
+
+<button
+class="btn btn-white"
+onclick="submitReview()">
+YORUMU GÖNDER
+</button>
+
+<div
+class="auth-message"
+id="reviewMessage">
+Yorum yapmak için hesabınıza giriş yapın.
+</div>
+
+</div>
+
+
+<div
+class="review-list"
+id="reviewList">
 
 </div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- İLETİŞİM -->
 
 <section class="cta" id="iletisim">
 
@@ -1198,9 +1056,8 @@ BAŞLATALIM.
 </h2>
 
 <p>
-Markanız için yeni bir fikriniz mi var?
-Bizimle iletişime geçin ve projenizi birlikte
-hayata geçirelim.
+Markanız için bir fikriniz mi var?
+Bizimle Instagram üzerinden iletişime geçin.
 </p>
 
 <a
@@ -1213,8 +1070,6 @@ INSTAGRAM'DAN RANDEVU AL →
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
 <div>
@@ -1222,25 +1077,85 @@ INSTAGRAM'DAN RANDEVU AL →
 </div>
 
 <div>
-
 Instagram:
-
 <a
 href="https://www.instagram.com/aka_reklamcilik_2026/"
 target="_blank">
-
 @aka_reklamcilik_2026
-
 </a>
-
 </div>
 
 </footer>
 
 
-<script>
+<!-- FIREBASE -->
 
-function openMenu(){
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+
+import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+}
+from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    orderBy,
+    serverTimestamp
+}
+from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+
+/* FIREBASE AYARLARI */
+
+const firebaseConfig = {
+
+    apiKey: "AIzaSyCUqRJ8hU6cc0YWkXXfJbqPX_s-61Qa1ig",
+
+    authDomain: "aka-reklamcilik.firebaseapp.com",
+
+    projectId: "aka-reklamcilik",
+
+    storageBucket: "aka-reklamcilik.firebasestorage.app",
+
+    messagingSenderId: "144496611386",
+
+    appId: "1:144496611386:web:ff60bb647a69788d62a503",
+
+    measurementId: "G-6E14V0XLQR"
+
+};
+
+
+/* FIREBASE BAŞLAT */
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+const db = getFirestore(app);
+
+
+/* DEĞİŞKENLER */
+
+let currentUser = null;
+
+let selectedRating = 0;
+
+
+/* MENÜ */
+
+window.openMenu = function(){
 
     document
     .getElementById("mobileMenu")
@@ -1250,10 +1165,9 @@ function openMenu(){
     .body
     .classList.add("no-scroll");
 
-}
+};
 
-
-function closeMenu(){
+window.closeMenu = function(){
 
     document
     .getElementById("mobileMenu")
@@ -1263,10 +1177,481 @@ function closeMenu(){
     .body
     .classList.remove("no-scroll");
 
+};
+
+
+/* LOGIN / REGISTER */
+
+window.showLogin = function(){
+
+    document
+    .getElementById("loginForm")
+    .classList.add("active");
+
+    document
+    .getElementById("registerForm")
+    .classList.remove("active");
+
+    document
+    .getElementById("loginTab")
+    .classList.add("active");
+
+    document
+    .getElementById("registerTab")
+    .classList.remove("active");
+
+};
+
+window.showRegister = function(){
+
+    document
+    .getElementById("registerForm")
+    .classList.add("active");
+
+    document
+    .getElementById("loginForm")
+    .classList.remove("active");
+
+    document
+    .getElementById("registerTab")
+    .classList.add("active");
+
+    document
+    .getElementById("loginTab")
+    .classList.remove("active");
+
+};
+
+
+/* KAYIT */
+
+document
+.getElementById("registerForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("registerName").value.trim();
+
+    const email =
+    document.getElementById("registerEmail").value.trim();
+
+    const password =
+    document.getElementById("registerPassword").value;
+
+    const message =
+    document.getElementById("authMessage");
+
+    try{
+
+        const userCredential =
+        await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        await addDoc(
+            collection(db,"users"),
+            {
+                uid:userCredential.user.uid,
+                name:name,
+                email:email,
+                createdAt:serverTimestamp()
+            }
+        );
+
+        message.textContent =
+        "Hesabınız başarıyla oluşturuldu.";
+
+    }catch(error){
+
+        message.textContent =
+        "Kayıt başarısız: " + firebaseError(error.code);
+
+    }
+
+});
+
+
+/* GİRİŞ */
+
+document
+.getElementById("loginForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const email =
+    document.getElementById("loginEmail").value.trim();
+
+    const password =
+    document.getElementById("loginPassword").value;
+
+    const message =
+    document.getElementById("authMessage");
+
+    try{
+
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        message.textContent =
+        "Giriş başarılı.";
+
+    }catch(error){
+
+        message.textContent =
+        "Giriş başarısız: " + firebaseError(error.code);
+
+    }
+
+});
+
+
+/* ÇIKIŞ */
+
+window.logout = async function(){
+
+    await signOut(auth);
+
+};
+
+
+/* AUTH DURUMU */
+
+onAuthStateChanged(auth, function(user){
+
+    currentUser = user;
+
+    const authArea =
+    document.getElementById("authArea");
+
+    const userPanel =
+    document.getElementById("userPanel");
+
+    const userEmail =
+    document.getElementById("userEmail");
+
+    if(user){
+
+        authArea.style.display = "none";
+
+        userPanel.style.display = "block";
+
+        userEmail.textContent =
+        user.email;
+
+        document.getElementById("reviewMessage")
+        .textContent =
+        "Yorum yazabilirsiniz.";
+
+    }else{
+
+        authArea.style.display = "block";
+
+        userPanel.style.display = "none";
+
+        document.getElementById("reviewMessage")
+        .textContent =
+        "Yorum yapmak için hesabınıza giriş yapın.";
+
+    }
+
+});
+
+
+/* YILDIZ */
+
+document
+.querySelectorAll(".star-btn")
+.forEach(function(button){
+
+    button.addEventListener("click",function(){
+
+        selectedRating =
+        Number(this.dataset.star);
+
+        document
+        .querySelectorAll(".star-btn")
+        .forEach(function(btn){
+
+            const star =
+            Number(btn.dataset.star);
+
+            if(star <= selectedRating){
+
+                btn.classList.add("selected");
+
+            }else{
+
+                btn.classList.remove("selected");
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* YORUM EKLE */
+
+window.submitReview = async function(){
+
+    const message =
+    document.getElementById("reviewMessage");
+
+    if(!currentUser){
+
+        message.textContent =
+        "Önce hesabınıza giriş yapmalısınız.";
+
+        return;
+
+    }
+
+    if(selectedRating < 1){
+
+        message.textContent =
+        "Lütfen 1–5 yıldız arasında puan verin.";
+
+        return;
+
+    }
+
+    const text =
+    document.getElementById("reviewText")
+    .value
+    .trim();
+
+    if(!text){
+
+        message.textContent =
+        "Lütfen yorumunuzu yazın.";
+
+        return;
+
+    }
+
+    try{
+
+        await addDoc(
+            collection(db,"reviews"),
+            {
+                uid:currentUser.uid,
+                email:currentUser.email,
+                rating:selectedRating,
+                text:text,
+                createdAt:serverTimestamp()
+            }
+        );
+
+        document
+        .getElementById("reviewText")
+        .value = "";
+
+        selectedRating = 0;
+
+        document
+        .querySelectorAll(".star-btn")
+        .forEach(function(btn){
+
+            btn.classList.remove("selected");
+
+        });
+
+        message.textContent =
+        "Yorumunuz gönderildi. Teşekkürler!";
+
+        loadReviews();
+
+    }catch(error){
+
+        message.textContent =
+        "Yorum gönderilemedi: " +
+        firebaseError(error.code);
+
+    }
+
+};
+
+
+/* YORUMLARI YÜKLE */
+
+async function loadReviews(){
+
+    const reviewList =
+    document.getElementById("reviewList");
+
+    try{
+
+        const q =
+        query(
+            collection(db,"reviews"),
+            orderBy("createdAt","desc")
+        );
+
+        const snapshot =
+        await getDocs(q);
+
+        reviewList.innerHTML = "";
+
+        let total = 0;
+
+        let count = 0;
+
+        snapshot.forEach(function(doc){
+
+            const data = doc.data();
+
+            total += Number(data.rating);
+
+            count++;
+
+            const div =
+            document.createElement("div");
+
+            div.className = "review";
+
+            const stars =
+            "★".repeat(data.rating) +
+            "☆".repeat(5 - data.rating);
+
+            div.innerHTML = `
+
+                <div class="review-stars">
+                    ${stars}
+                </div>
+
+                <div class="review-text">
+                    ${escapeHTML(data.text)}
+                </div>
+
+                <div class="review-user">
+                    ${escapeHTML(
+                        maskEmail(data.email || "Müşteri")
+                    )}
+                </div>
+
+            `;
+
+            reviewList.appendChild(div);
+
+        });
+
+
+        if(count > 0){
+
+            const average =
+            (total / count).toFixed(1);
+
+            document
+            .getElementById("averageRating")
+            .textContent = average;
+
+        }else{
+
+            document
+            .getElementById("averageRating")
+            .textContent = "0.0";
+
+        }
+
+        document
+        .getElementById("ratingCount")
+        .textContent =
+        count + " değerlendirme";
+
+    }catch(error){
+
+        console.log(
+            "Yorumlar yüklenemedi:",
+            error
+        );
+
+    }
+
 }
 
-</script>
 
+/* EMAIL GİZLE */
+
+function maskEmail(email){
+
+    if(!email.includes("@")){
+        return email;
+    }
+
+    const parts =
+    email.split("@");
+
+    const name =
+    parts[0];
+
+    const hidden =
+    name.length > 2
+    ? name.substring(0,2) + "***"
+    : "***";
+
+    return hidden + "@" + parts[1];
+
+}
+
+
+/* HTML GÜVENLİĞİ */
+
+function escapeHTML(text){
+
+    const div =
+    document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+
+/* FIREBASE HATA MESAJLARI */
+
+function firebaseError(code){
+
+    switch(code){
+
+        case "auth/email-already-in-use":
+            return "Bu e-posta zaten kayıtlı.";
+
+        case "auth/invalid-email":
+            return "Geçerli bir e-posta adresi girin.";
+
+        case "auth/weak-password":
+            return "Şifre en az 6 karakter olmalı.";
+
+        case "auth/invalid-credential":
+            return "E-posta veya şifre hatalı.";
+
+        case "auth/too-many-requests":
+            return "Çok fazla deneme yapıldı. Daha sonra tekrar deneyin.";
+
+        default:
+            return "Bir hata oluştu.";
+
+    }
+
+}
+
+
+/* İLK YORUMLARI YÜKLE */
+
+loadReviews();
+
+</script>
 
 </body>
 </html>
