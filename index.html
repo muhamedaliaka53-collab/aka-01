@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AKA REKLAMCILIK | Dijital Reklam Ajansı</title>
+
+<meta name="description" content="AKA REKLAMCILIK - Markanızı dijital dünyada öne çıkarıyoruz.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#555;
+    border-radius:20px;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:22px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #1d1d1d;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#777;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:130px 20px 80px;
+    position:relative;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:#fff;
+    opacity:.04;
+    filter:blur(100px);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1000px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #333;
+    padding:10px 18px;
+    border-radius:30px;
+    color:#aaa;
+    font-size:12px;
+    letter-spacing:3px;
+    margin-bottom:25px;
+    animation:fadeDown 1s ease;
+}
+
+.hero h1{
+    font-size:clamp(55px,10vw,125px);
+    line-height:.85;
+    letter-spacing:-6px;
+    font-weight:900;
+    animation:fadeUp 1s ease;
+}
+
+.hero h1 span{
+    color:#777;
+}
+
+.hero p{
+    max-width:650px;
+    margin:35px auto;
+    color:#999;
+    font-size:18px;
+    line-height:1.7;
+    animation:fadeUp 1.3s ease;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:17px 30px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    transition:.3s;
+}
+
+.btn-white{
+    background:white;
+    color:black;
+}
+
+.btn-white:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(255,255,255,.15);
+}
+
+.btn-dark{
+    border:1px solid #333;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* SECTION */
+
+section{
+    padding:110px 7%;
+}
+
+.section-title{
+    max-width:700px;
+    margin-bottom:60px;
+}
+
+.section-title small{
+    color:#777;
+    letter-spacing:4px;
+}
+
+.section-title h2{
+    font-size:clamp(40px,6vw,70px);
+    margin-top:15px;
+    letter-spacing:-3px;
+}
+
+.section-title p{
+    color:#888;
+    margin-top:20px;
+    line-height:1.7;
+}
+
+/* SERVICES */
+
+.services{
+    border-top:1px solid #1c1c1c;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    padding:40px 30px;
+    min-height:250px;
+    border:1px solid #222;
+    background:#090909;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.service:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:2px;
+    background:white;
+    left:-100%;
+    top:0;
+    transition:.4s;
+}
+
+.service:hover:before{
+    left:0;
+}
+
+.service:hover{
+    transform:translateY(-8px);
+    border-color:#444;
+}
+
+.service-number{
+    color:#555;
+    font-size:13px;
+    margin-bottom:45px;
+}
+
+.service h3{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.service p{
+    color:#777;
+    line-height:1.6;
+}
+
+/* ABOUT */
+
+.about{
+    border-top:1px solid #1c1c1c;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-text h2{
+    font-size:55px;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    color:#888;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.about-box{
+    border:1px solid #222;
+    padding:60px 40px;
+    background:#090909;
+}
+
+.about-box h3{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#777;
+    line-height:1.7;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    border-top:1px solid #1c1c1c;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.project{
+    height:300px;
+    border:1px solid #222;
+    background:linear-gradient(135deg,#111,#050505);
+    display:flex;
+    align-items:flex-end;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.project:hover{
+    transform:scale(.98);
+    border-color:#555;
+}
+
+.project-number{
+    position:absolute;
+    top:25px;
+    right:25px;
+    color:#555;
+    font-size:14px;
+}
+
+.project h3{
+    font-size:28px;
+}
+
+.project p{
+    color:#777;
+    margin-top:8px;
+}
+
+/* CTA */
+
+.cta{
+    border-top:1px solid #1c1c1c;
+    text-align:center;
+    padding:140px 20px;
+}
+
+.cta h2{
+    font-size:clamp(45px,8vw,90px);
+    letter-spacing:-5px;
+}
+
+.cta p{
+    color:#777;
+    margin:25px auto 35px;
+    max-width:600px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #1c1c1c;
+    padding:40px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#666;
+    font-size:13px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    header{
+        padding:18px 20px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        letter-spacing:-4px;
+    }
+
+    section{
+        padding:80px 20px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .about-text h2{
+        font-size:45px;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project{
+        height:250px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+AKA <span>REKLAMCILIK</span>
+</div>
+
+<nav>
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#hizmetler">Hizmetler</a>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#portfolyo">Çalışmalar</a>
+<a href="#iletisim">İletişim</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="anasayfa">
+
+<div class="hero-content">
+
+<div class="badge">
+AKA REKLAMCILIK
+</div>
+
+<h1>
+MARKANI<br>
+<span>ÖNE ÇIKAR.</span>
+</h1>
+
+<p>
+Markanızın dijital dünyada daha güçlü görünmesi için
+modern reklam, tasarım ve dijital çözümler üretiyoruz.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-white"
+href="https://www.instagram.com/o6.muhammed.14/"
+target="_blank">
+RANDEVU AL →
+</a>
+
+<a
+class="btn btn-dark"
+href="#hizmetler">
+HİZMETLERİ KEŞFET
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="hizmetler">
+
+<div class="section-title">
+
+<small>NE YAPIYORUZ?</small>
+
+<h2>Hizmetlerimiz</h2>
+
+<p>
+Markanızın ihtiyaçlarına göre yaratıcı ve modern
+reklam çözümleri hazırlıyoruz.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+<div class="service">
+
+<div class="service-number">01 / SOCIAL MEDIA</div>
+
+<h3>Sosyal Medya</h3>
+
+<p>
+Instagram ve sosyal medya hesaplarınız için
+dikkat çekici içerikler ve reklam tasarımları.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02 / BRANDING</div>
+
+<h3>Marka Tasarımı</h3>
+
+<p>
+Logo, kurumsal kimlik ve markanızın profesyonel
+görünümü için yaratıcı tasarımlar.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">03 / ADVERTISING</div>
+
+<h3>Reklam</h3>
+
+<p>
+İşletmenizi daha fazla kişiye ulaştırmak için
+yaratıcı reklam kampanyaları.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">04 / DESIGN</div>
+
+<h3>Afiş & Poster</h3>
+
+<p>
+Etkinlik, kampanya ve işletmeleriniz için
+modern afiş ve poster tasarımları.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">05 / VIDEO</div>
+
+<h3>Video Reklam</h3>
+
+<p>
+Markanızı daha etkili anlatmak için
+sosyal medyaya uygun video içerikleri.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">06 / DIGITAL</div>
+
+<h3>Dijital Çözümler</h3>
+
+<p>
+Dijital dünyada markanızın daha profesyonel
+görünmesini sağlayan çözümler.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="hakkimizda">
+
+<div class="about-text">
+
+<small>HAKKIMIZDA</small>
+
+<h2>FİKİRLERİ<br>MARKAYA<br>DÖNÜŞTÜRÜYORUZ.</h2>
+
+<p>
+AKA REKLAMCILIK olarak amacımız markaların
+dijital dünyada daha dikkat çekici ve
+profesyonel görünmesini sağlamak.
+</p>
+
+<p>
+Yaratıcı fikirleri modern tasarımla birleştirerek
+işletmeler için etkili reklam çözümleri üretiyoruz.
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<h3>AKA</h3>
+
+<p>
+Yaratıcılık. Tasarım. Reklam.
+<br><br>
+Markanız için düşündüğünüzden daha fazlasını
+üretmek için buradayız.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolyo">
+
+<div class="section-title">
+
+<small>PORTFOLYO</small>
+
+<h2>Çalışmalarımız</h2>
+
+<p>
+Yakında burada gerçekleştirdiğimiz reklam ve
+tasarım çalışmalarını görebilirsiniz.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+<div class="project">
+
+<div class="project-number">01</div>
+
+<div>
+<h3>Marka Tasarımı</h3>
+<p>Logo & Kurumsal Kimlik</p>
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-number">02</div>
+
+<div>
+<h3>Sosyal Medya</h3>
+<p>Instagram Reklam Tasarımları</p>
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-number">03</div>
+
+<div>
+<h3>Reklam Kampanyası</h3>
+<p>Dijital Reklam Çalışması</p>
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-number">04</div>
+
+<div>
+<h3>Poster Tasarımı</h3>
+<p>Modern Afiş & Poster</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="iletisim">
+
+<h2>PROJENİ<br>BAŞLATALIM.</h2>
+
+<p>
+Markanız için yeni bir fikir mi var?
+Bizimle iletişime geçin ve birlikte çalışmaya başlayalım.
+</p>
+
+<a
+class="btn btn-white"
+href="https://www.instagram.com/o6.muhammed.14/"
+target="_blank">
+INSTAGRAM'DAN RANDEVU AL →
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div>
+© 2026 AKA REKLAMCILIK
+</div>
+
+<div>
+Instagram:
+<a
+href="https://www.instagram.com/o6.muhammed.14/"
+target="_blank">
+@o6.muhammed.14
+</a>
+</div>
+
+</footer>
+
+
+</body>
+</html> m
