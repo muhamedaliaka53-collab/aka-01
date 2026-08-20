@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AKA REKLAMCILIK | Dijital Reklam Ajansı</title>
+<title>AKA REKLAMCILIK | Reklam ve Tasarım</title>
 
-<meta name="description" content="AKA REKLAMCILIK - Markanızı dijital dünyada öne çıkarıyoruz.">
+<meta name="description" content="AKA REKLAMCILIK - Sosyal medya, reklam, logo, afiş, video ve web tasarım hizmetleri. Markanızı dijital dünyada öne çıkarın.">
+
+<meta name="keywords" content="AKA Reklamcılık, reklam, tasarım, logo tasarımı, sosyal medya, Ankara reklam, web tasarım">
 
 <style>
 
@@ -23,14 +25,16 @@ html{
 body{
     background:#050505;
     color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     overflow-x:hidden;
 }
 
-/* SCROLL BAR */
+body.no-scroll{
+    overflow:hidden;
+}
 
 ::-webkit-scrollbar{
-    width:8px;
+    width:7px;
 }
 
 ::-webkit-scrollbar-track{
@@ -49,89 +53,205 @@ header{
     top:0;
     left:0;
     width:100%;
-    z-index:1000;
-    padding:22px 7%;
+    height:78px;
+    z-index:9999;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(15px);
-    border-bottom:1px solid #1d1d1d;
+
+    padding:0 7%;
+
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid #1c1c1c;
 }
 
 .logo{
-    color:white;
+    color:#fff;
+    text-decoration:none;
     font-size:22px;
     font-weight:900;
     letter-spacing:2px;
 }
 
 .logo span{
-    color:#777;
+    color:#666;
 }
 
-nav{
+/* DESKTOP MENU */
+
+.desktop-menu{
     display:flex;
-    gap:30px;
+    align-items:center;
+    gap:28px;
 }
 
-nav a{
+.desktop-menu a{
     color:#aaa;
     text-decoration:none;
-    font-size:14px;
+    font-size:13px;
     transition:.3s;
 }
 
-nav a:hover{
+.desktop-menu a:hover{
     color:#fff;
+}
+
+.header-button{
+    padding:12px 20px;
+    background:#fff;
+    color:#000 !important;
+    border-radius:3px;
+    font-weight:bold !important;
+}
+
+.header-button:hover{
+    background:#aaa;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-button{
+    display:none;
+
+    background:none;
+    border:1px solid #333;
+
+    color:#fff;
+
+    width:45px;
+    height:42px;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu{
+    position:fixed;
+
+    top:78px;
+    right:-100%;
+
+    width:100%;
+    height:calc(100vh - 78px);
+
+    background:#050505;
+
+    z-index:9998;
+
+    padding:40px 25px;
+
+    transition:.4s;
+
+    border-top:1px solid #222;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.mobile-menu a{
+    display:block;
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:28px;
+    font-weight:bold;
+
+    padding:20px 0;
+
+    border-bottom:1px solid #222;
+}
+
+.mobile-menu .mobile-randevu{
+    margin-top:30px;
+
+    text-align:center;
+
+    background:#fff;
+    color:#000;
+
+    padding:18px;
+
+    border:none;
 }
 
 /* HERO */
 
 .hero{
     min-height:100vh;
+
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
+
     text-align:center;
+
     padding:130px 20px 80px;
+
     position:relative;
+    overflow:hidden;
 }
 
-.hero:before{
+.hero::before{
     content:"";
+
     position:absolute;
-    width:450px;
-    height:450px;
-    border-radius:50%;
+
+    width:500px;
+    height:500px;
+
     background:#fff;
-    opacity:.04;
-    filter:blur(100px);
+
+    opacity:.035;
+
+    border-radius:50%;
+
+    filter:blur(120px);
 }
 
 .hero-content{
     position:relative;
     z-index:2;
+
     max-width:1000px;
 }
 
 .badge{
     display:inline-block;
+
     border:1px solid #333;
+
     padding:10px 18px;
+
     border-radius:30px;
-    color:#aaa;
+
+    color:#888;
+
     font-size:12px;
-    letter-spacing:3px;
-    margin-bottom:25px;
+
+    letter-spacing:4px;
+
+    margin-bottom:28px;
+
     animation:fadeDown 1s ease;
 }
 
 .hero h1{
-    font-size:clamp(55px,10vw,125px);
-    line-height:.85;
-    letter-spacing:-6px;
+    font-size:clamp(55px,10vw,130px);
+
+    line-height:.84;
+
+    letter-spacing:-7px;
+
     font-weight:900;
+
     animation:fadeUp 1s ease;
 }
 
@@ -139,44 +259,59 @@ nav a:hover{
     color:#777;
 }
 
-.hero p{
+.hero-description{
     max-width:650px;
+
     margin:35px auto;
-    color:#999;
+
+    color:#888;
+
     font-size:18px;
+
     line-height:1.7;
+
     animation:fadeUp 1.3s ease;
 }
 
 .buttons{
     display:flex;
+
     justify-content:center;
+
     gap:15px;
+
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
+
     padding:17px 30px;
+
     text-decoration:none;
+
     font-weight:bold;
-    border-radius:4px;
+
+    border-radius:3px;
+
     transition:.3s;
 }
 
 .btn-white{
-    background:white;
-    color:black;
+    background:#fff;
+    color:#000;
 }
 
 .btn-white:hover{
     transform:translateY(-5px);
+
     box-shadow:0 15px 40px rgba(255,255,255,.15);
 }
 
 .btn-dark{
+    color:#fff;
+
     border:1px solid #333;
-    color:white;
 }
 
 .btn-dark:hover{
@@ -184,165 +319,222 @@ nav a:hover{
     color:#000;
 }
 
-/* SECTION */
+/* GENERAL SECTION */
 
 section{
     padding:110px 7%;
 }
 
-.section-title{
-    max-width:700px;
+.section-heading{
+    max-width:750px;
+
     margin-bottom:60px;
 }
 
-.section-title small{
-    color:#777;
+.section-heading small{
+    color:#666;
+
     letter-spacing:4px;
+
+    font-size:12px;
 }
 
-.section-title h2{
-    font-size:clamp(40px,6vw,70px);
+.section-heading h2{
+    font-size:clamp(42px,6vw,72px);
+
+    letter-spacing:-4px;
+
     margin-top:15px;
-    letter-spacing:-3px;
 }
 
-.section-title p{
-    color:#888;
+.section-heading p{
+    color:#777;
+
+    line-height:1.8;
+
     margin-top:20px;
-    line-height:1.7;
 }
 
 /* SERVICES */
 
 .services{
-    border-top:1px solid #1c1c1c;
+    border-top:1px solid #1b1b1b;
 }
 
 .services-grid{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+
+    gap:18px;
 }
 
 .service{
-    padding:40px 30px;
-    min-height:250px;
+    min-height:260px;
+
+    padding:35px 30px;
+
     border:1px solid #222;
+
     background:#090909;
-    transition:.4s;
+
     position:relative;
-    overflow:hidden;
-}
 
-.service:before{
-    content:"";
-    position:absolute;
-    width:100%;
-    height:2px;
-    background:white;
-    left:-100%;
-    top:0;
+    overflow:hidden;
+
     transition:.4s;
 }
 
-.service:hover:before{
+.service::after{
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
     left:0;
+
+    width:0;
+    height:2px;
+
+    background:#fff;
+
+    transition:.4s;
 }
 
 .service:hover{
     transform:translateY(-8px);
+
     border-color:#444;
+}
+
+.service:hover::after{
+    width:100%;
 }
 
 .service-number{
     color:#555;
-    font-size:13px;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
     margin-bottom:45px;
 }
 
 .service h3{
     font-size:24px;
+
     margin-bottom:15px;
 }
 
 .service p{
     color:#777;
-    line-height:1.6;
+
+    line-height:1.7;
 }
 
 /* ABOUT */
 
 .about{
-    border-top:1px solid #1c1c1c;
+    border-top:1px solid #1b1b1b;
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:80px;
+
+    gap:70px;
+
     align-items:center;
 }
 
-.about-text h2{
-    font-size:55px;
-    letter-spacing:-3px;
-    margin-bottom:25px;
+.about h2{
+    font-size:clamp(42px,6vw,70px);
+
+    letter-spacing:-4px;
+
+    line-height:.95;
+
+    margin:20px 0 30px;
 }
 
-.about-text p{
+.about p{
     color:#888;
+
     line-height:1.8;
+
+    margin-bottom:18px;
+}
+
+.about-card{
+    border:1px solid #222;
+
+    background:#090909;
+
+    padding:55px 40px;
+}
+
+.about-card h3{
+    font-size:60px;
+
+    letter-spacing:-4px;
+
     margin-bottom:20px;
 }
 
-.about-box{
-    border:1px solid #222;
-    padding:60px 40px;
-    background:#090909;
-}
-
-.about-box h3{
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-.about-box p{
+.about-card p{
     color:#777;
-    line-height:1.7;
 }
 
 /* PORTFOLIO */
 
 .portfolio{
-    border-top:1px solid #1c1c1c;
+    border-top:1px solid #1b1b1b;
 }
 
 .portfolio-grid{
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
-    gap:20px;
+
+    gap:18px;
 }
 
 .project{
-    height:300px;
-    border:1px solid #222;
-    background:linear-gradient(135deg,#111,#050505);
-    display:flex;
-    align-items:flex-end;
+    min-height:310px;
+
     padding:30px;
+
+    border:1px solid #222;
+
+    background:
+    radial-gradient(circle at 80% 20%,#252525 0,#0b0b0b 35%,#050505 70%);
+
+    display:flex;
+
+    align-items:flex-end;
+
     position:relative;
+
     overflow:hidden;
+
     transition:.4s;
 }
 
 .project:hover{
-    transform:scale(.98);
+    transform:translateY(-6px);
+
     border-color:#555;
 }
 
 .project-number{
     position:absolute;
+
     top:25px;
     right:25px;
+
     color:#555;
-    font-size:14px;
+
+    font-size:13px;
 }
 
 .project h3{
@@ -351,79 +543,146 @@ section{
 
 .project p{
     color:#777;
+
     margin-top:8px;
+}
+
+/* REVIEWS */
+
+.reviews{
+    border-top:1px solid #1b1b1b;
+}
+
+.reviews-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.review{
+    border:1px solid #222;
+
+    background:#090909;
+
+    padding:35px;
+}
+
+.stars{
+    letter-spacing:5px;
+
+    margin-bottom:25px;
+}
+
+.review p{
+    color:#888;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+.review strong{
+    font-size:14px;
 }
 
 /* CTA */
 
 .cta{
-    border-top:1px solid #1c1c1c;
+    border-top:1px solid #1b1b1b;
+
     text-align:center;
-    padding:140px 20px;
+
+    padding:150px 20px;
 }
 
 .cta h2{
-    font-size:clamp(45px,8vw,90px);
-    letter-spacing:-5px;
+    font-size:clamp(45px,8vw,100px);
+
+    letter-spacing:-6px;
+
+    line-height:.9;
 }
 
 .cta p{
     color:#777;
-    margin:25px auto 35px;
+
     max-width:600px;
+
+    margin:30px auto 35px;
+
+    line-height:1.7;
 }
 
 /* FOOTER */
 
 footer{
-    border-top:1px solid #1c1c1c;
+    border-top:1px solid #1b1b1b;
+
     padding:40px 7%;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
-    color:#666;
+
+    justify-content:space-between;
+
+    color:#555;
+
     font-size:13px;
 }
 
 footer a{
-    color:white;
+    color:#fff;
+
     text-decoration:none;
 }
 
 /* ANIMATIONS */
 
 @keyframes fadeUp{
+
     from{
         opacity:0;
         transform:translateY(30px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 @keyframes fadeDown{
+
     from{
         opacity:0;
         transform:translateY(-20px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 /* MOBILE */
 
-@media(max-width:800px){
+@media(max-width:900px){
 
     header{
-        padding:18px 20px;
+        padding:0 20px;
     }
 
-    nav{
+    .desktop-menu{
         display:none;
+    }
+
+    .menu-button{
+        display:block;
     }
 
     .hero h1{
@@ -443,23 +702,57 @@ footer a{
         gap:40px;
     }
 
-    .about-text h2{
-        font-size:45px;
-    }
-
     .portfolio-grid{
         grid-template-columns:1fr;
     }
 
+    .reviews-grid{
+        grid-template-columns:1fr;
+    }
+
     .project{
-        height:250px;
+        min-height:250px;
     }
 
     footer{
+        padding:30px 20px;
+
         flex-direction:column;
+
         gap:15px;
+
         text-align:center;
     }
+
+}
+
+@media(max-width:500px){
+
+    .hero{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .hero h1{
+        font-size:56px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .about-card{
+        padding:40px 25px;
+    }
+
 }
 
 </style>
@@ -467,23 +760,74 @@ footer a{
 
 <body>
 
+
 <!-- HEADER -->
 
 <header>
 
-<div class="logo">
+<a href="#anasayfa" class="logo">
 AKA <span>REKLAMCILIK</span>
-</div>
+</a>
 
-<nav>
+
+<nav class="desktop-menu">
+
 <a href="#anasayfa">Ana Sayfa</a>
+
 <a href="#hizmetler">Hizmetler</a>
-<a href="#hakkimizda">Hakkımızda</a>
+
 <a href="#portfolyo">Çalışmalar</a>
+
+<a href="#hakkimizda">Hakkımızda</a>
+
+<a href="#yorumlar">Yorumlar</a>
+
 <a href="#iletisim">İletişim</a>
+
+<a
+class="header-button"
+href="https://www.instagram.com/aka_reklamcilik_2026/"
+target="_blank">
+Randevu Al
+</a>
+
 </nav>
 
+
+<button
+class="menu-button"
+id="menuButton"
+onclick="openMenu()">
+☰
+</button>
+
 </header>
+
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
+
+<a href="#hizmetler" onclick="closeMenu()">Hizmetler</a>
+
+<a href="#portfolyo" onclick="closeMenu()">Çalışmalar</a>
+
+<a href="#hakkimizda" onclick="closeMenu()">Hakkımızda</a>
+
+<a href="#yorumlar" onclick="closeMenu()">Müşteri Yorumları</a>
+
+<a href="#iletisim" onclick="closeMenu()">İletişim</a>
+
+<a
+class="mobile-randevu"
+href="https://www.instagram.com/aka_reklamcilik_2026/"
+target="_blank">
+RANDEVU AL →
+</a>
+
+</div>
 
 
 <!-- HERO -->
@@ -501,9 +845,10 @@ MARKANI<br>
 <span>ÖNE ÇIKAR.</span>
 </h1>
 
-<p>
-Markanızın dijital dünyada daha güçlü görünmesi için
-modern reklam, tasarım ve dijital çözümler üretiyoruz.
+<p class="hero-description">
+Markanızın dijital dünyada daha güçlü, daha profesyonel
+ve daha dikkat çekici görünmesi için yaratıcı reklam
+ve tasarım çözümleri üretiyoruz.
 </p>
 
 <div class="buttons">
@@ -532,21 +877,22 @@ HİZMETLERİ KEŞFET
 
 <section class="services" id="hizmetler">
 
-<div class="section-title">
+<div class="section-heading">
 
 <small>NE YAPIYORUZ?</small>
 
 <h2>Hizmetlerimiz</h2>
 
 <p>
-Markanızın ihtiyaçlarına göre yaratıcı ve modern
-reklam çözümleri hazırlıyoruz.
+Markanızın ihtiyacına göre modern ve yaratıcı
+dijital reklam çözümleri hazırlıyoruz.
 </p>
 
 </div>
 
 
 <div class="services-grid">
+
 
 <div class="service">
 
@@ -556,7 +902,7 @@ reklam çözümleri hazırlıyoruz.
 
 <p>
 Instagram ve sosyal medya hesaplarınız için
-dikkat çekici içerikler ve reklam tasarımları.
+modern içerik, reklam ve tasarım çalışmaları.
 </p>
 
 </div>
@@ -566,11 +912,11 @@ dikkat çekici içerikler ve reklam tasarımları.
 
 <div class="service-number">02 / BRANDING</div>
 
-<h3>Marka Tasarımı</h3>
+<h3>Logo Tasarımı</h3>
 
 <p>
-Logo, kurumsal kimlik ve markanızın profesyonel
-görünümü için yaratıcı tasarımlar.
+Markanızın kimliğini yansıtan özgün ve
+profesyonel logo tasarımları.
 </p>
 
 </div>
@@ -580,11 +926,11 @@ görünümü için yaratıcı tasarımlar.
 
 <div class="service-number">03 / ADVERTISING</div>
 
-<h3>Reklam</h3>
+<h3>Reklam Yönetimi</h3>
 
 <p>
-İşletmenizi daha fazla kişiye ulaştırmak için
-yaratıcı reklam kampanyaları.
+Markanızın daha fazla kişiye ulaşması için
+yaratıcı reklam çözümleri.
 </p>
 
 </div>
@@ -597,8 +943,8 @@ yaratıcı reklam kampanyaları.
 <h3>Afiş & Poster</h3>
 
 <p>
-Etkinlik, kampanya ve işletmeleriniz için
-modern afiş ve poster tasarımları.
+Kampanya, etkinlik ve işletmeler için
+dikkat çekici afiş tasarımları.
 </p>
 
 </div>
@@ -611,8 +957,8 @@ modern afiş ve poster tasarımları.
 <h3>Video Reklam</h3>
 
 <p>
-Markanızı daha etkili anlatmak için
-sosyal medyaya uygun video içerikleri.
+Sosyal medya için etkileyici ve dikkat çekici
+video reklam içerikleri.
 </p>
 
 </div>
@@ -620,16 +966,17 @@ sosyal medyaya uygun video içerikleri.
 
 <div class="service">
 
-<div class="service-number">06 / DIGITAL</div>
+<div class="service-number">06 / WEB</div>
 
-<h3>Dijital Çözümler</h3>
+<h3>Web Tasarım</h3>
 
 <p>
-Dijital dünyada markanızın daha profesyonel
-görünmesini sağlayan çözümler.
+İşletmeler için modern, hızlı ve mobil uyumlu
+web sitesi tasarımları.
 </p>
 
 </div>
+
 
 </div>
 
@@ -640,33 +987,38 @@ görünmesini sağlayan çözümler.
 
 <section class="about" id="hakkimizda">
 
-<div class="about-text">
+<div>
 
 <small>HAKKIMIZDA</small>
 
-<h2>FİKİRLERİ<br>MARKAYA<br>DÖNÜŞTÜRÜYORUZ.</h2>
+<h2>
+FİKİRLERİ<br>
+MARKAYA<br>
+DÖNÜŞTÜRÜYORUZ.
+</h2>
 
 <p>
-AKA REKLAMCILIK olarak amacımız markaların
-dijital dünyada daha dikkat çekici ve
-profesyonel görünmesini sağlamak.
+AKA REKLAMCILIK olarak markaların dijital dünyada
+daha güçlü bir kimlik oluşturmasına yardımcı oluyoruz.
 </p>
 
 <p>
-Yaratıcı fikirleri modern tasarımla birleştirerek
-işletmeler için etkili reklam çözümleri üretiyoruz.
+Tasarım, reklam ve dijital çözümleri bir araya
+getirerek markanız için yaratıcı işler üretiyoruz.
 </p>
 
 </div>
 
 
-<div class="about-box">
+<div class="about-card">
 
 <h3>AKA</h3>
 
 <p>
-Yaratıcılık. Tasarım. Reklam.
-<br><br>
+Yaratıcılık.<br>
+Tasarım.<br>
+Reklam.<br><br>
+
 Markanız için düşündüğünüzden daha fazlasını
 üretmek için buradayız.
 </p>
@@ -680,15 +1032,15 @@ Markanız için düşündüğünüzden daha fazlasını
 
 <section class="portfolio" id="portfolyo">
 
-<div class="section-title">
+<div class="section-heading">
 
-<small>PORTFOLYO</small>
+<small>PORTFÖY</small>
 
 <h2>Çalışmalarımız</h2>
 
 <p>
-Yakında burada gerçekleştirdiğimiz reklam ve
-tasarım çalışmalarını görebilirsiniz.
+Gerçek çalışmalarını burada sergileyebilirsin.
+Yeni projeler geldikçe bu bölüme ekleyebilirsin.
 </p>
 
 </div>
@@ -696,13 +1048,17 @@ tasarım çalışmalarını görebilirsiniz.
 
 <div class="portfolio-grid">
 
+
 <div class="project">
 
 <div class="project-number">01</div>
 
 <div>
-<h3>Marka Tasarımı</h3>
-<p>Logo & Kurumsal Kimlik</p>
+
+<h3>Logo Tasarımı</h3>
+
+<p>Marka & Kurumsal Kimlik</p>
+
 </div>
 
 </div>
@@ -713,8 +1069,11 @@ tasarım çalışmalarını görebilirsiniz.
 <div class="project-number">02</div>
 
 <div>
+
 <h3>Sosyal Medya</h3>
-<p>Instagram Reklam Tasarımları</p>
+
+<p>Instagram Reklam Tasarımı</p>
+
 </div>
 
 </div>
@@ -725,8 +1084,11 @@ tasarım çalışmalarını görebilirsiniz.
 <div class="project-number">03</div>
 
 <div>
+
 <h3>Reklam Kampanyası</h3>
+
 <p>Dijital Reklam Çalışması</p>
+
 </div>
 
 </div>
@@ -737,26 +1099,108 @@ tasarım çalışmalarını görebilirsiniz.
 <div class="project-number">04</div>
 
 <div>
-<h3>Poster Tasarımı</h3>
-<p>Modern Afiş & Poster</p>
+
+<h3>Afiş Tasarımı</h3>
+
+<p>Poster & Kampanya Tasarımı</p>
+
 </div>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- REVIEWS -->
+
+<section class="reviews" id="yorumlar">
+
+<div class="section-heading">
+
+<small>MÜŞTERİLERİMİZ</small>
+
+<h2>Müşteri Yorumları</h2>
+
+<p>
+Gerçek müşterilerinden aldığın yorumları
+buraya ekleyebilirsin.
+</p>
+
+</div>
+
+
+<div class="reviews-grid">
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Buraya gerçek müşterinizden aldığınız
+yorum gelecek.”
+</p>
+
+<strong>— Müşteri Adı</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Buraya gerçek müşterinizden aldığınız
+yorum gelecek.”
+</p>
+
+<strong>— Müşteri Adı</strong>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Buraya gerçek müşterinizden aldığınız
+yorum gelecek.”
+</p>
+
+<strong>— Müşteri Adı</strong>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="cta" id="iletisim">
 
-<h2>PROJENİ<br>BAŞLATALIM.</h2>
+<h2>
+PROJENİ<br>
+BAŞLATALIM.
+</h2>
 
 <p>
-Markanız için yeni bir fikir mi var?
-Bizimle iletişime geçin ve birlikte çalışmaya başlayalım.
+Markanız için yeni bir fikriniz mi var?
+Bizimle iletişime geçin ve projenizi birlikte
+hayata geçirelim.
 </p>
 
 <a
@@ -778,15 +1222,50 @@ INSTAGRAM'DAN RANDEVU AL →
 </div>
 
 <div>
+
 Instagram:
+
 <a
 href="https://www.instagram.com/aka_reklamcilik_2026/"
 target="_blank">
-@aka_reklamcilik_2026aka_reklamcilik_2026
+
+@aka_reklamcilik_2026
+
 </a>
+
 </div>
 
 </footer>
+
+
+<script>
+
+function openMenu(){
+
+    document
+    .getElementById("mobileMenu")
+    .classList.add("active");
+
+    document
+    .body
+    .classList.add("no-scroll");
+
+}
+
+
+function closeMenu(){
+
+    document
+    .getElementById("mobileMenu")
+    .classList.remove("active");
+
+    document
+    .body
+    .classList.remove("no-scroll");
+
+}
+
+</script>
 
 
 </body>
